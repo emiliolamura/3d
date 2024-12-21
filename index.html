@@ -47,7 +47,7 @@
 
             // HDRI Lighting
             const rgbeLoader = new RGBELoader();
-            rgbeLoader.load('asset/1.hdr', (texture) => {
+            rgbeLoader.load('1.hdr', (texture) => {
                 texture.mapping = THREE.EquirectangularReflectionMapping;
                 scene.environment = texture;
                 scene.background = texture;
@@ -55,7 +55,7 @@
 
             // Load FBX Model
             const fbxLoader = new FBXLoader();
-            fbxLoader.load('asset/Brain.fbx', (object) => {
+            fbxLoader.load('Brain.fbx', (object) => {
                 object.traverse((child) => {
                     if (child.isMesh) {
                         child.castShadow = true;
